@@ -1,0 +1,27 @@
+@media (max-width: 576px) {
+  .information-block {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .information-wrapblock {
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.25;
+  }
+
+  .infoblock-title {
+    padding-right: 0px;
+  }
+
+  .infoblock-title,
+  .infoblock-info {
+    flex: auto;
+    text-align: center;
+  }
+
+  .information-block__description-info {
+    line-height: 1.3;
+  }
+}

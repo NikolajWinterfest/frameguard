@@ -1,0 +1,53 @@
+@font-face {
+  font-family: 'Involve Regular';
+  src: local('Involve-Regular'),
+    url('/public/fonts/InvolveRegular.woff2'),
+    url('/public/fonts/InvolveRegular.woff');
+  font-style: normal;
+  font-display: wrap;
+}
+
+@font-face {
+  font-family: 'Involve Medium';
+  src: local('Involve-Medium'),
+    url('/public/fonts/InvolveMedium.woff2'),
+    url('/public/fonts/InvolveMedium.woff');
+  font-style: normal;
+  font-display: wrap;
+}
+
+@font-face {
+  font-family: 'VelaSans ExtraLight';
+  src: local('VelaSans-ExtraLight'),
+    url('/public/fonts/VelaSansExtraLight.woff2'),
+    url('/public/fonts/VelaSansExtraLight.woff');
+  font-style: normal;
+  font-display: wrap;
+}
+
+@font-face {
+  font-family: 'VelaSans Light';
+  src: local('VelaSans-Light'),
+    url('/public/fonts/VelaSansLight.woff2'),
+    url('/public/fonts/VelaSansLight.woff');
+  font-style: normal;
+  font-display: wrap;
+}
+
+@font-face {
+  font-family: 'VelaSans Regular';
+  src: local('VelaSans-Regular'),
+    url('/public/fonts/VelaSansRegular.woff2'),
+    url('/public/fonts/VelaSansRegular.woff');
+  font-style: normal;
+  font-display: wrap;
+}
+
+@font-face {
+  font-family: 'VelaSans Medium';
+  src: local('VelaSans Medium'),
+    url('/public/fonts/VelaSansMedium.woff2'),
+    url('/public/fonts/VelaSansMedium.woff');
+  font-style: normal;
+  font-display: wrap;
+}

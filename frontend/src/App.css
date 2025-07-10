@@ -1,0 +1,296 @@
+/* Import font styles */
+@import url('./css/fonts.css');
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--color__primary-softblack-light);
+}
+
+*::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  height: 100vh;
+  font-family: 'VelaSans Regular', sans-serif;
+  font-weight: 400;
+  font-size: clamp(13px, 2vw, 16px);
+  color: var(--color__primary-white);
+  background-color: var(--color__primary-softblack);
+  word-spacing: 2px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+input,
+textarea {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+:root {
+  --color__primary-softblack: #252525;
+  --color__primary-softblack-2: #212121;
+  --color__primary-softblack-3: #1f1f1f;
+  --color__primary-softblack-4: #282828;
+  --color__primary-softblack-5: #1d1d1d;
+  --color__primary-softblack-light: #393939;
+  --color__primary-softblack-light-2: #494949;
+  --color__primary-softblack-light-3: #3b3b3b;
+  --color__primary-white: #ffffff;
+  --color__black: #000000;
+  --color__black-2: #191919;
+  --color__black-3: #111111;
+  --color__gray-1: #ebebeb;
+  --color__gray-2: #c5c5c5;
+  --color__gray-3: #7a7a7a;
+  --color__gray-light: #e0e0e0;
+  --color__gray-card: #dddddd;
+  --color__green-btn: #1d8a34;
+  --color__green-btn-2: #196d2b;
+  --color__red: #ff3d3d;
+  --color__red-2: #f02b2b;
+  --color__red-3: #cc2323;
+  --background-modalwindow: rgba(17, 17, 17, 0.91);
+  --background-modalwindow-2: rgba(17, 17, 17, 0.61);
+  --background-modalwindow-btn: rgba(115, 115, 115, 0.1);
+  --background-card-opacity: rgba(0, 0, 0, 0.5);
+  --background-gradient-black: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
+  --padding__section-top: clamp(130px, 19vw, 200px);
+  --padding__section-bottom: clamp(130px, 19vw, 200px);
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1690px;
+}
+
+.day-theme {
+  color: var(--color__primary-softblack);
+  background-color: var(--color__primary-white);
+  transition: color 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+.night-theme {
+  color: var(--color__primary-white);
+  background-color: var(--color__primary-softblack);
+  transition: color 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+.background-companyname {
+  padding: clamp(50px, 4vw, 125px) 0;
+  font-family: 'Involve Medium', sans-serif;
+  font-size: clamp(20px, 14vw, 250px);
+  color: var(--color__primary-softblack-2);
+  letter-spacing: clamp(-1px, 10vw, -10px);
+  text-align: center;
+  text-shadow: -1px -1px 2px #181818;
+  background: none;
+}
+
+.background-companyname.day-theme {
+  color: #e5e5e5;
+  text-shadow: -1px -1px 2px #a1a1a1;
+  transition: text-shadow 0.3s ease-out, color 0.3s ease-out;
+}
+
+.stop-scroll {
+  overflow: hidden;
+}
+
+.stop-scroll-pr {
+  overflow: hidden;
+  padding-right: 8px;
+}
+
+.btn-reset {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.secondary-title {
+  margin-bottom: clamp(15px, 4vw, 75px);
+  font-family: 'VelaSans Regular', sans-serif;
+  font-weight: 400;
+  font-size: clamp(22px, 5vw, 71px);
+}
+
+.tertiary-title {
+  margin-bottom: 10px;
+  font-family: 'VelaSans Light', sans-serif;
+  font-weight: 400;
+  font-size: clamp(24px, 7vw, 47px);
+}
+
+.fourth-title {
+  font-family: 'VelaSans Light', sans-serif;
+  font-size: clamp(14px, 2vw, 22px);
+}
+
+.adminpanel-title {
+  margin-bottom: 25px;
+  font-family: 'VelaSans Regular', sans-serif;
+  font-weight: 400;
+  font-size: clamp(20px, 5vw, 52px);
+}
+
+/* Button Close with «Opacity Effect» */
+
+.wrapbutton-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+}
+
+.button-close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  transition: background-color 0.3s ease-out;
+}
+
+.button-close:focus-visible {
+  background-color: var(--background-modalwindow-btn);
+  transition: background-color 0.3s ease-out;
+}
+
+@media (any-hover: hover) {
+  .button-close:hover {
+    background-color: var(--background-modalwindow-btn);
+    transition: background-color 0.3s ease-out;
+  }
+}
+
+.button-close::after,
+.button-close::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 2px;
+  transform: rotate(45deg);
+  background-color: var(--color__primary-white);
+}
+
+.button-close::before {
+  transform: rotate(-45deg);
+}
+
+/* Button Close Dark/Light Theme */
+
+.wrapbutton-close-theme {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: clamp(35px, 6vw, 50px);
+  height: clamp(35px, 6vw, 50px);
+}
+
+.button-close-theme {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  background-color: var(--color__primary-white);
+}
+
+.button-close-theme.day-theme {
+  background-color: var(--color__primary-softblack);
+  transition: background-color 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.button-close-theme:focus-visible {
+  background-color: var(--color__gray-2);
+  transition: background-color 0.3s ease-out;
+}
+
+.button-close-theme.day-theme:focus-visible {
+  background-color: var(--color__primary-softblack-light);
+}
+
+@media (any-hover: hover) {
+  .button-close-theme:hover {
+    background-color: var(--color__gray-2);
+    transition: background-color 0.3s ease-out;
+  }
+
+  .button-close-theme.day-theme:hover {
+    background-color: var(--color__primary-softblack-light);
+  }
+}
+
+.button-close-theme::after,
+.button-close-theme::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: clamp(25px, 4vw, 40px);
+  height: 2px;
+  transform: rotate(45deg);
+  background-color: var(--color__primary-softblack);
+}
+
+.button-close-theme::before {
+  transform: rotate(-45deg);
+}
+
+.button-close-theme.day-theme::after,
+.button-close-theme.day-theme::before {
+  background-color: var(--color__primary-white);
+}

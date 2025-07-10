@@ -1,0 +1,23 @@
+.watchvideo {
+  padding-top: var(--padding__section-top);
+}
+
+.watchvideo__title {
+  margin: 0;
+  padding: 0;
+  width: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.watchvideo__content {
+  position: relative;
+  width: 100%;
+  height: clamp(250px, 50vw, 700px);
+  text-align: center;
+}
+
+.watchvideo__content-video {
+  width: 100%;
+  height: 100%;
+}

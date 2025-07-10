@@ -1,0 +1,56 @@
+.notfound {
+  padding-top: var(--padding__section-top);
+  padding-bottom: var(--padding__section-bottom);
+}
+
+.notfound__wrapper {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1690px;
+}
+
+.notfound-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.notfound-content__title {
+  font-family: 'VelaSans Light', sans-serif;
+  font-weight: 100;
+  font-size: clamp(25px, 5vw, 51px);
+  margin-bottom: clamp(10px, 3vw, 15px);
+}
+
+.notfound-content__descr {
+  margin-bottom: clamp(15px, 4vw, 30px);
+  max-width: 650px;
+  width: 100%;
+}
+
+.notfound-content__link {
+  display: inline-block;
+  padding: 15px;
+  max-width: 350px;
+  border-radius: 25px;
+  color: var(--color__primary-softblack);
+  background-color: var(--color__primary-white);
+  transition: color 0.3s ease-out, background-color 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.notfound-content__link.day-theme {
+  color: var(--color__primary-white);
+  background-color: var(--color__primary-softblack);
+  transition: color 0.3s ease-out, background-color 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.notfound-content__link:hover {
+  background-color: var(--color__gray-card);
+  transition: background-color 0.3s ease-out;
+}
+
+.notfound-content__link:active {
+  transform: scale(0.95);
+  transition: transform 0.3s ease-out;
+}

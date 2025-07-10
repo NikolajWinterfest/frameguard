@@ -1,0 +1,146 @@
+.employees__modalwindow {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-modalwindow);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
+  overflow-y: auto;
+}
+
+.card {
+  cursor: auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
+}
+
+.employees__modalwindow.is-active {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
+}
+
+.employees__modalwindow.is-active .card {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
+  animation: open-employeecard 0.36s ease-out;
+}
+
+@keyframes open-employeecard {
+  from {
+    transform: scale(0.5);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+.card__content {
+  display: flex;
+  gap: clamp(20px, 3vw, 50px);
+}
+
+.employee-card {
+  position: relative;
+  padding: 0 15px;
+  max-width: 1000px;
+  height: 700px;
+  width: 100%;
+}
+
+.employee-card__photo {
+  display: block;
+  max-width: clamp(350px, 39vw, 500px);
+  width: 100%;
+  max-height: clamp(500px, 57vw, 700px);
+  height: 100%;
+  object-fit: cover;
+}
+
+.employee-card__photo.invisible {
+  animation: invisible 12s infinite;
+}
+
+@keyframes invisible {
+
+  0%,
+  5% {
+    opacity: 1;
+  }
+
+  10%,
+  50% {
+    opacity: 0;
+  }
+
+  55%,
+  100% {
+    opacity: 1;
+  }
+}
+
+.employee-card__information {
+  max-width: clamp(345px, 45vw, 800px);
+  width: 100%;
+}
+
+.employee-card__information,
+.employee-card__information.day-theme,
+.employee-card__information.night-theme {
+  background-color: transparent;
+}
+
+.employee-card__information.day-theme {
+  color: var(--color__primary-white);
+}
+
+.employee-card__name {
+  position: relative;
+  display: inline-block;
+  margin-right: 50px;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  font-family: 'VelaSans ExtraLight', sans-serif;
+  font-size: clamp(22px, 5vw, 32px);
+}
+
+.employee-card__name::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px solid var(--color__primary-white);
+}
+
+.employee-card__description {
+  padding-right: 5px;
+  max-height: clamp(440px, 43vw, 550px);
+  height: 100%;
+  overflow-y: auto;
+}
+
+.employee-card__workposition,
+.employee-card__experience,
+.employee-card__description {
+  margin-bottom: 5px;
+  font-size: clamp(16px, 2vw, 20px);
+  font-family: 'VelaSans Light', sans-serif;
+}
+
+.employee-card__workposition-title,
+.employee-card__experience-title,
+.employee-card__description-title {
+  padding-right: 8px;
+  font-family: 'VelaSans Regular', sans-serif;
+}

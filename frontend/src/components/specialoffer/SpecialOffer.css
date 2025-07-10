@@ -1,0 +1,148 @@
+.specialoffer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 9;
+  display: flex;
+  padding: 15px;
+  max-width: 400px;
+  background-color: transparent;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
+}
+
+.specialoffer.is-active {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
+}
+
+.specialoffer__content {
+  position: relative;
+  padding: clamp(15px, 5vw, 30px);
+  width: 100%;
+  background-color: var(--color__primary-white);
+}
+
+.specialoffer__content.day-theme {
+  background-color: var(--color__primary-softblack);
+}
+
+.specialoffer__title {
+  margin-bottom: clamp(15px, 5vw, 25px);
+  padding-top: 12px;
+  font-family: 'VelaSans Light', sans-serif;
+  font-weight: 100;
+  font-size: clamp(14px, 5vw, 16px);
+  color: var(--color__primary-softblack);
+  background-color: transparent;
+  text-align: center;
+}
+
+.specialoffer__title.day-theme {
+  color: var(--color__primary-white);
+}
+
+.specialoffer__form-btn {
+  padding: clamp(5px, 5vw, 10px);
+  width: 100%;
+  border: 2px solid var(--color__primary-softblack);
+  font-size: clamp(14px, 5vw, 16px);
+  color: var(--color__primary-softblack);
+  background-color: var(--color__primary-white);
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.3s ease-out, color 0.3s ease-out, background-color 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.specialoffer__form-btn.day-theme {
+  border-color: var(--color__primary-white);
+  color: var(--color__primary-white);
+  background-color: var(--color__primary-softblack);
+}
+
+@media (any-hover: hover) {
+  .specialoffer__form-btn:hover {
+    color: var(--color__primary-white);
+    background-color: var(--color__primary-softblack);
+    transition: border-color 0.3s ease-out, color 0.3s ease-out, background-color 0.3s ease-out, transform 0.3s ease-out;
+  }
+
+  .specialoffer__form-btn.day-theme:hover {
+    color: var(--color__primary-softblack);
+    background-color: var(--color__primary-white);
+    transition: border-color 0.3s ease-out, color 0.3s ease-out, background-color 0.3s ease-out, transform 0.3s ease-out;
+  }
+}
+
+.specialoffer__form-btn:active {
+  color: var(--color__primary-white);
+  background-color: var(--color__primary-softblack);
+  transform: scale(0.95);
+  transition: border-color 0.3s ease-out, color 0.3s ease-out, background-color 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.specialoffer__form-btn.day-theme:active {
+  color: var(--color__primary-softblack);
+  background-color: var(--color__primary-white);
+  transform: scale(0.95);
+  transition: border-color 0.3s ease-out, color 0.3s ease-out, background-color 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.specialoffer__wrapbutton {
+  top: 5px;
+  right: 5px;
+  width: clamp(20px, 6vw, 35px);
+  height: clamp(20px, 6vw, 35px);
+}
+
+.specialoffer__wrapbutton-btn {
+  background-color: var(--color__primary-white);
+  transition: background-color 0.3s ease-out;
+}
+
+.specialoffer__wrapbutton-btn.day-theme {
+  background-color: var(--color__primary-softblack);
+  transition: background-color 0.3s ease-out;
+}
+
+.specialoffer__wrapbutton-btn::after,
+.specialoffer__wrapbutton-btn::before {
+  width: clamp(10px, 4vw, 25px);
+}
+
+.specialoffer__wrapbutton-btn::after,
+.specialoffer__wrapbutton-btn::before {
+  background-color: var(--color__primary-white);
+}
+
+.specialoffer__wrapbutton-btn:focus-visible {
+  background-color: var(--color__primary-softblack-light);
+}
+
+@media (any-hover: hover) {
+  .specialoffer__wrapbutton-btn:hover {
+    background-color: var(--color__gray-2);
+  }
+
+  .specialoffer__wrapbutton-btn.day-theme:hover {
+    background-color: var(--color__primary-softblack-light);
+  }
+}
+
+.specialoffer__wrapbutton-btn.day-theme:focus-visible {
+  background-color: var(--color__gray-2);
+}
+
+.specialoffer__wrapbutton-btn::after,
+.specialoffer__wrapbutton-btn::before {
+  background-color: var(--color__primary-softblack);
+  transition: background-color 0.3s ease-out;
+}
+
+.specialoffer__wrapbutton-btn.day-theme::after,
+.specialoffer__wrapbutton-btn.day-theme::before {
+  background-color: var(--color__primary-white);
+  transition: background-color 0.3s ease-out;
+}

@@ -1,0 +1,498 @@
+.adminpanel__modalwindow {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--color__primary-softblack-2);
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  transform: scale(0);
+  transition: opacity 0.3s ease-out, visibility 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.adminpanel__modalwindow.day-theme {
+  background-color: var(--color__gray-1);
+}
+
+.adminpanel__modalwindow.is-active {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  transition: transform 0.3s ease-out;
+}
+
+.adminpanel-card {
+  padding: 35px 0;
+  width: 100%;
+}
+
+.adminpanel-card__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: clamp(45px, 6vw, 50px) clamp(25px, 6vw, 100px);
+  max-width: 1200px;
+  width: 100%;
+  background-color: var(--color__primary-softblack);
+  box-shadow: 0px 0px 10px 5px var(--color__primary-softblack-5);
+}
+
+.adminpanel-card__content.day-theme {
+  background-color: var(--color__primary-white);
+  box-shadow: 0px 0px 10px 5px var(--color__gray-2);
+}
+
+.adminpanel-card__content-title {
+  margin-bottom: 15px;
+  font-family: 'VelaSans Light', sans-serif;
+  font-weight: 100;
+  font-size: clamp(18px, 5vw, 32px);
+  color: var(--color__primary-white);
+  background-color: transparent;
+}
+
+/* Error text for Card Input Fields */
+
+.adminpanel-card__content-texterror {
+  margin-bottom: 10px;
+  font-size: clamp(14px, 3vw, 20px);
+  color: var(--color__red);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-25%);
+  transition: opacity 0.3s ease-out, visibility 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.adminpanel-card__content-texterror.is-active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: opacity 0.3s ease-out, visibility 0.3s ease-out, transform 0.3s ease-out;
+}
+
+/*  */
+
+.adminpanel-card__content-title.day-theme {
+  color: var(--color__primary-softblack);
+  background-color: transparent;
+}
+
+.adminpanel-cardform {
+  width: 100%;
+}
+
+.admin-inputfields {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(12px, 3vw, 20px);
+  margin-bottom: clamp(12px, 3vw, 20px);
+  color: var(--color__primary-softblack);
+}
+
+.inputfields-text {
+  display: block;
+  padding-left: 10px;
+  margin-bottom: 5px;
+  font-size: clamp(14px, 3vw, 18px);
+  color: var(--color__primary-white);
+  background-color: transparent;
+}
+
+.inputfields-text.day-theme {
+  color: var(--color__primary-softblack);
+  background-color: transparent;
+}
+
+.inputfields-input,
+.experience-input,
+.admin-inputfields__textarea {
+  padding: clamp(10px, 2vw, 15px);
+  width: 100%;
+  border: 2px solid var(--color__primary-white);
+  font-size: clamp(16px, 3vw, 20px);
+  color: var(--color__primary-white);
+  background-color: transparent;
+  outline: none;
+  transition: border-color 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+.inputfields-input.day-theme,
+.admin-inputfields__textarea.day-theme {
+  color: var(--color__primary-softblack);
+  background-color: transparent;
+  border-color: var(--color__primary-softblack);
+}
+
+.choose-gender:focus-visible,
+.inputfields-input:focus-visible {
+  background-color: var(--color__primary-softblack-2);
+  transition: border-color 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+.choose-gender.day-theme:focus-visible,
+.inputfields-input.day-theme:focus-visible {
+  background-color: var(--color__gray-1);
+  transition: border-color 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+@media (any-hover: hover) {
+
+  .choose-gender:hover,
+  .inputfields-input:hover {
+    background-color: var(--color__primary-softblack-2);
+    transition: border-color 0.3s ease-out, background-color 0.3s ease-out;
+  }
+
+  .choose-gender.day-theme:hover,
+  .inputfields-input.day-theme:hover {
+    background-color: var(--color__gray-1);
+    transition: border-color 0.3s ease-out, background-color 0.3s ease-out;
+  }
+}
+
+.admin-inputfields__textarea {
+  min-height: clamp(250px, 50vw, 350px);
+}
+
+.admin-inputfields__wrapperinput {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border: 2px solid var(--color__primary-white);
+  color: var(--color__primary-white);
+  background-color: var(--color__primary-softblack);
+  transition: color 0.3s ease-out, background-color 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.admin-inputfields__wrapperinput.day-theme {
+  border-color: var(--color__primary-softblack);
+  color: var(--color__primary-softblack);
+  background-color: var(--color__primary-white);
+}
+
+.admin-inputfields__wrapperinput-text {
+  font-size: clamp(14px, 4vw, 18px);
+}
+
+.admin-inputfields__inputfile {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.admin-inputfields__input:focus-visible,
+.admin-inputfields__textarea:focus-visible {
+  background-color: var(--color__primary-softblack-3);
+  transition: border-color 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+.admin-inputfields__input.day-theme:focus-visible,
+.admin-inputfields__textarea.day-theme:focus-visible {
+  background-color: var(--color__gray-1);
+  transition: border-color 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+.admin-inputfields__wrapperinput:focus-within {
+  color: var(--color__primary-softblack);
+  background-color: var(--color__primary-white);
+  transition: color 0.3s ease-out, background-color 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.admin-inputfields__wrapperinput.day-theme:focus-within {
+  color: var(--color__primary-white);
+  background-color: var(--color__primary-softblack);
+  transition: color 0.3s ease-out, background-color 0.3s ease-out, transform 0.3s ease-out;
+}
+
+@media (any-hover: hover) {
+
+  .admin-inputfields__input:hover,
+  .admin-inputfields__textarea:hover {
+    background-color: var(--color__primary-softblack-3);
+    transition: border-color 0.3s ease-out, background-color 0.3s ease-out;
+  }
+
+  .admin-inputfields__input.day-theme:hover,
+  .admin-inputfields__textarea.day-theme:hover {
+    background-color: var(--color__gray-1);
+    transition: border-color 0.3s ease-out, background-color 0.3s ease-out;
+  }
+
+  .admin-inputfields__wrapperinput:hover {
+    color: var(--color__primary-softblack);
+    background-color: var(--color__primary-white);
+    transition: color 0.3s ease-out, background-color 0.3s ease-out, transform 0.3s ease-out;
+  }
+
+  .admin-inputfields__wrapperinput.day-theme:hover {
+    color: var(--color__primary-white);
+    background-color: var(--color__primary-softblack);
+    transition: color 0.3s ease-out, background-color 0.3s ease-out, transform 0.3s ease-out;
+  }
+}
+
+.admin-inputfields__wrapperinput:active {
+  color: var(--color__primary-softblack);
+  background-color: var(--color__primary-white);
+  transform: scale(0.95);
+  transition: color 0.3s ease-out, background-color 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.admin-inputfields__wrapperinput.day-theme:active {
+  color: var(--color__primary-white);
+  background-color: var(--color__primary-softblack);
+  transform: scale(0.95);
+  transition: color 0.3s ease-out, background-color 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.adminpanel-cardform__wrapperbuttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: clamp(12px, 3vw, 20px);
+}
+
+.adminpanel-cardform__wrapperbuttons-submitbtn,
+.adminpanel-cardform__wrapperbuttons-clearbtn {
+  padding: clamp(10px, 2vw, 15px) clamp(10px, 3vw, 20px);
+  max-width: 100%;
+  flex: 1 1 calc(50% - 20px);
+  border: 2px solid var(--color__primary-white);
+  font-size: clamp(16px, 5vw, 20px);
+  color: var(--color__primary-white);
+  background-color: var(--color__primary-softblack);
+  outline: none;
+  cursor: pointer;
+  transition: color 0.3s ease-out, background-color 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.adminpanel-cardform__wrapperbuttons-submitbtn.day-theme,
+.adminpanel-cardform__wrapperbuttons-clearbtn.day-theme {
+  border-color: var(--color__primary-softblack);
+  color: var(--color__primary-softblack);
+  background-color: var(--color__primary-white);
+}
+
+.adminpanel-cardform__wrapperbuttons-submitbtn:focus-visible,
+.adminpanel-cardform__wrapperbuttons-clearbtn:focus-visible {
+  color: var(--color__primary-softblack);
+  background-color: var(--color__primary-white);
+  transition: color 0.3s ease-out, background-color 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.adminpanel-cardform__wrapperbuttons-submitbtn.day-theme:focus-visible,
+.adminpanel-cardform__wrapperbuttons-clearbtn.day-theme:focus-visible {
+  color: var(--color__primary-white);
+  background-color: var(--color__primary-softblack);
+  transition: color 0.3s ease-out, background-color 0.3s ease-out, transform 0.3s ease-out;
+}
+
+@media (any-hover: hover) {
+
+  .adminpanel-cardform__wrapperbuttons-submitbtn:hover,
+  .adminpanel-cardform__wrapperbuttons-clearbtn:hover {
+    color: var(--color__primary-softblack);
+    background-color: var(--color__primary-white);
+    transition: color 0.3s ease-out, background-color 0.3s ease-out, transform 0.3s ease-out;
+  }
+
+  .adminpanel-cardform__wrapperbuttons-submitbtn.day-theme:hover,
+  .adminpanel-cardform__wrapperbuttons-clearbtn.day-theme:hover {
+    color: var(--color__primary-white);
+    background-color: var(--color__primary-softblack);
+    transition: color 0.3s ease-out, background-color 0.3s ease-out, transform 0.3s ease-out;
+  }
+}
+
+.adminpanel-cardform__wrapperbuttons-submitbtn:active,
+.adminpanel-cardform__wrapperbuttons-clearbtn:active {
+  color: var(--color__primary-softblack);
+  background-color: var(--color__primary-white);
+  transform: scale(0.95);
+  transition: color 0.3s ease-out, background-color 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.adminpanel-cardform__wrapperbuttons-submitbtn.day-theme:active,
+.adminpanel-cardform__wrapperbuttons-clearbtn.day-theme:active {
+  color: var(--color__primary-white);
+  background-color: var(--color__primary-softblack);
+  transition: color 0.3s ease-out, background-color 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.admin-inputfields__wrapperblock {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: clamp(12px, 3vw, 20px);
+}
+
+/* Choose gender */
+
+.employeeblock-inputfields {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(12px, 3vw, 20px);
+}
+
+.experience-input {
+  text-align: center;
+}
+
+.admin-inputfields__label-choose {
+  display: flex;
+}
+
+.choose-gender {
+  display: flex;
+  width: 100%;
+  border: 2px solid var(--color__primary-white);
+  background-color: transparent;
+  transition: border-color 0.3s ease-out;
+}
+
+.choose-gender.day-theme {
+  border-color: var(--color__primary-softblack);
+  background-color: transparent;
+}
+
+.choose-gender__text {
+  padding-left: 10px;
+  font-size: clamp(14px, 3vw, 18px);
+  background-color: transparent;
+}
+
+.choose-gender__text.day-theme {
+  border-color: var(--color__primary-white);
+  background-color: var(--color__primary-white);
+}
+
+.choose-gender__input.day-theme {
+  color: var(--color__primary-white);
+  background-color: var(--color__primary-softblack);
+}
+
+.choose-gender__item {
+  position: relative;
+  width: 100%;
+  color: var(--color__primary-softblack);
+  background-color: transparent;
+}
+
+.choose-gender__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+  opacity: 0;
+}
+
+.choose-gender__item .choose-gender__text {
+  position: relative;
+  z-index: 9;
+  display: block;
+  padding: clamp(10px, 2vw, 15px);
+  padding-left: clamp(34px, 5vw, 41px);
+  font-size: clamp(16px, 3vw, 20px);
+  color: var(--color__primary-white);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.choose-gender__item.day-theme .choose-gender__text {
+  color: var(--color__primary-softblack);
+  background-color: transparent;
+}
+
+.choose-gender__item .choose-gender__item-check {
+  position: absolute;
+  top: clamp(10px, 2vw, 14px);
+  left: 10px;
+  z-index: 5;
+  width: clamp(18px, 3vw, 26px);
+  height: clamp(18px, 3vw, 26px);
+  border: 2px solid var(--color__primary-white);
+  background-color: transparent;
+  transition: border 0.3s ease-out;
+  -webkit-transition: border 0.3s ease-out;
+}
+
+.choose-gender__item.day-theme .choose-gender__item-check {
+  border: 2px solid var(--color__primary-softblack);
+  background-color: transparent;
+}
+
+.choose-gender__item .choose-gender__item-check::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: clamp(10px, 1vw, 14px);
+  height: clamp(10px, 1vw, 14px);
+  transform: translate(-50%, -50%);
+  transition: background 0.3s ease-out;
+  -webkit-transition: background 0.3s ease-out;
+}
+
+.choose-gender__input:checked~.choose-gender__item-check {
+  border: 2px solid var(--color__primary-white);
+}
+
+.choose-gender__input.day-theme:checked~.choose-gender__item-check {
+  border-color: var(--color__primary-softblack);
+}
+
+.choose-gender__input:checked~.choose-gender__item-check::before {
+  background-color: var(--color__primary-white);
+}
+
+.choose-gender__input.day-theme:checked~.choose-gender__item-check::before {
+  background-color: var(--color__primary-softblack);
+}
+
+.choose-gender__input:checked~.choose-gender__text {
+  color: var(--color__primary-white);
+}
+
+.choose-gender__input:checked~.choose-gender__text.day-theme {
+  color: var(--color__primary-softblack);
+}
+
+.employeeblock-inputfields__label {
+  flex: 1 1 auto;
+}
+
+/* Delete arrows in different Browsers */
+.experience-input[type=number]::-webkit-outer-spin-button,
+.experience-input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.experience-input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.inputfields-input.error-input,
+.admin-inputfields__textarea.error-input,
+.choose-gender.error-input {
+  border-color: var(--color__red);
+  transition: border-color 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+.loaded-image-container {
+  max-width: 450px;
+  width: fit-content;
+  margin: 0;
+  border: 2px solid white;
+}

@@ -1,0 +1,111 @@
+.news {
+  padding-top: clamp(150px, 19vw, 300px);
+}
+
+.news__wrapper {
+  width: 100%;
+}
+
+.news__title {
+  margin: 0 auto;
+  margin-bottom: clamp(15px, 4vw, 75px);
+  padding: 0 20px;
+  width: 100%;
+  max-width: 1690px;
+}
+
+.news-content {
+  padding: clamp(35px, 5vw, 50px) 0;
+  box-shadow: 0px 0px 10px 5px var(--color__primary-softblack-5);
+  background-color: var(--color__primary-softblack);
+  transition: border-color 0.3s ease-out, box-shadow 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+.news-content.day-theme {
+  box-shadow: 0px 0px 10px 5px var(--color__gray-light);
+  background-color: var(--color__primary-white);
+  transition: box-shadow 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+.news-content__item {
+  position: relative;
+  max-width: 650px;
+  max-height: clamp(300px, 39vw, 450px);
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.item-news__photowrapper {
+  width: 100%;
+  height: 450px;
+}
+
+.item-news__photowrapper-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-out;
+}
+
+@media (any-hover: hover) {
+  .news-content__item .item-news__photowrapper-photo:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-out;
+  }
+}
+
+.news-wrapperinfo {
+  position: absolute;
+  left: 50%;
+  bottom: 7%;
+  width: 80%;
+  text-align: center;
+  transform: translateX(-50%);
+}
+
+.news-wrapperinfo::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  width: 80%;
+  border-bottom: 1px solid var(--color__primary-white);
+  transform: translateX(-50%);
+}
+
+.news-wrapperinfo__title {
+  font-family: 'VelaSans Light', sans-serif;
+  font-weight: 100;
+  font-size: 19px;
+  text-shadow: 0px 2px 1px var(--color__black);
+  background-color: transparent;
+}
+
+.news-wrapperinfo__title.day-theme {
+  color: var(--color__primary-white);
+}
+
+.news-wrapperinfo__date-publication {
+  font-size: 14px;
+}
+
+/* Slider Arrows */
+.slick-prev,
+.slick-next {
+  width: clamp(35px, 5vw, 40px);
+  height: clamp(35px, 5vw, 40px);
+  z-index: 1;
+}
+
+.slick-prev {
+  left: 10px;
+}
+
+.slick-next {
+  right: 10px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: clamp(30px, 5vw, 45px);
+}

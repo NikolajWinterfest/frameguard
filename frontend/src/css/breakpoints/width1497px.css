@@ -1,0 +1,7 @@
+@media (max-width: 1497px) {
+  .hero__content {
+    flex-direction: column-reverse;
+    gap: 100px;
+    padding-top: clamp(50px, 5vw, 65px);
+  }
+}

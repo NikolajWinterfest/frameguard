@@ -1,0 +1,48 @@
+.hero {
+  position: relative;
+  padding-top: clamp(100px, 13vw, 200px);
+  padding-bottom: clamp(100px, 13vw, 200px);
+  background-image: url('/public/assets/images/other/hero-background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.hero__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  padding-top: 100px;
+}
+
+.hero__title {
+  max-width: 800px;
+  font-family: 'VelaSans Regular', sans-serif;
+  font-weight: 400;
+  font-size: clamp(26px, 5vw, 71px);
+  line-height: 1.35em;
+  color: var(--color__primary-white);
+  text-align: center;
+}
+
+.hero__logotype {
+  max-width: clamp(450px, 50vw, 600px);
+  width: 100%;
+  font-family: 'Involve Medium', sans-serif;
+  font-size: clamp(430px, 42vw, 600px);
+  letter-spacing: -60px;
+  color: var(--color__primary-white);
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  background-color: transparent;
+  transform: translateY(-10px);
+  transition: color 0.3s ease-out;
+}
+
+.hero__logotype.day-theme {
+  color: var(--color__primary-white);
+  transition: color 0.3s ease-out;
+}

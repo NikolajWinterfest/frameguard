@@ -1,0 +1,36 @@
+.paragraphs-privacypolicy {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: clamp(15px, 3vw, 57px);
+}
+
+.paragraphs-privacypolicy__item {
+  max-width: clamp(450px, 39vw, 500px);
+}
+
+.paragraphs-privacypolicy__item-title {
+  margin-bottom: 5px;
+}
+
+.paragraphs-privacypolicy__item-descr {
+  padding-bottom: 5px;
+}
+
+.paragraphs-privacypolicy__item-descr-email {
+  color: var(--color__gray-3);
+  transition: color 0.3s ease;
+}
+
+.paragraphs-privacypolicy__item-descr-email:hover {
+  color: var(--color__primary-adamant-white);
+  transition: color 0.3s ease;
+}
+
+.paragraphs-privacypolicy__item-descr-list {
+  padding-left: 15px;
+}
+
+.paragraphs-privacypolicy__item-descr-item {
+  list-style: inside;
+}

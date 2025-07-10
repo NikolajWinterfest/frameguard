@@ -1,0 +1,82 @@
+[
+  {
+    "id": "07bd995e-c0cf-497f-bbb5-a956737ef095",
+    "name": "Родион",
+    "surname": "Шкоков",
+    "experience": "3",
+    "workposition": "CEO & CMO",
+    "gender": "male",
+    "description": "Организация всей деятельности и работа над алгоритмом по увеличению качества фото и видео",
+    "image": "/uploads/default/1722597903826-portfolio.jpg",
+    "creationDate": "2024-08-02T11:25:03.561Z",
+    "oldImage": "/uploads/default/1722597903826-portfolio.jpg"
+  },
+  {
+    "id": "3",
+    "name": "Анна",
+    "surname": "Дюрер",
+    "experience": "6",
+    "workposition": "Дизайнер",
+    "gender": "female",
+    "description": "Анна Дюрер - талантливый дизайнер с 6-летним опытом работы. Она обладает креативным подходом к решению задач и способна создать уникальные и привлекательные дизайн-концепции. Ходят слухи, что она дальний родственник самого Альбрехта Дюрера",
+    "image": "/uploads/default/person-3.jpg",
+    "creationDate": "undefined",
+    "oldImage": "/uploads/default/person-3.jpg"
+  },
+  {
+    "id": "4",
+    "name": "Диего",
+    "surname": "Альварес",
+    "experience": "3",
+    "workposition": "Разработчик нейронных сетей",
+    "gender": "male",
+    "description": "Диего Альварес - специалист по разработке нейронных сетей с 3-летним опытом работы. Он обладает глубокими знаниями в области машинного обучения и искусственного интеллекта.",
+    "image": "/uploads/default/person-4.jpg"
+  },
+  {
+    "id": "6",
+    "name": "Кристина",
+    "surname": "Палмер",
+    "experience": "5",
+    "workposition": "Фронтенд-разработчик",
+    "gender": "female",
+    "description": "Кристина Палмер - опытный фронтенд-разработчик из Великобритании с 5-летним стажем работы. Она специализируется на создании интерактивных пользовательских интерфейсов с использованием современных технологий.",
+    "image": "/uploads/default/person-6.jpg",
+    "creationDate": "undefined",
+    "oldImage": "/uploads/default/person-6.jpg"
+  },
+  {
+    "id": "8",
+    "name": "Николай",
+    "surname": "Цапаев",
+    "experience": "1",
+    "workposition": "Фронтенд-разработчик",
+    "gender": "male",
+    "description": "Информация дополняется",
+    "image": ""
+  },
+  {
+    "id": "b3ccf1a3-9ba8-4dd3-a142-591b207dfc2a",
+    "name": "Модам",
+    "surname": "Кошкина",
+    "experience": "5",
+    "workposition": "Котейка",
+    "gender": "female",
+    "description": "Кошка, которую все могут погладить и покормить! Лучшая в роли антистресса!!!",
+    "image": "/uploads/default/close-up-beautiful-domestic-white-cat-laying-desk-home.jpg",
+    "creationDate": "2024-07-23T14:41:58.406Z",
+    "oldImage": "/uploads/default/close-up-beautiful-domestic-white-cat-laying-desk-home.jpg"
+  },
+  {
+    "id": "a77e574d-7c16-491c-80b0-55caed0038af",
+    "name": "София",
+    "surname": "Бернар",
+    "experience": "1",
+    "workposition": "Маркетолог",
+    "gender": "female",
+    "description": "Информация дополняется",
+    "image": "",
+    "creationDate": "2025-07-09T19:52:25.469Z",
+    "cardType": "employees"
+  }
+]

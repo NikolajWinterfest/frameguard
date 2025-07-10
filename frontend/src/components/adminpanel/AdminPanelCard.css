@@ -1,0 +1,162 @@
+.datalist-cards {
+  display: flex;
+  flex-direction: column;
+}
+
+.datalist-cards__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.datalist-cards__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1 1 calc(33.33% - 15px);
+  max-width: 450px;
+  min-width: 250px;
+  min-height: 200px;
+  max-height: 330px;
+  box-shadow: 0px 0px 5px 3px var(--color__primary-softblack-3);
+  transition: box-shadow 0.3s ease-out;
+}
+
+.datalist-cards__item.day-theme {
+  box-shadow: 0px 0px 5px 3px var(--color__gray-3);
+  transition: box-shadow 0.3s ease-out;
+}
+
+.datalist-cards__item-wrapperimage {
+  position: relative;
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+}
+
+.datalist-cards__item-image {
+  width: 100%;
+  object-fit: cover;
+}
+
+.datalist-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.datalist-card__wrapperbuttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.datalist-card__update-btn,
+.datalist-card__delete-btn {
+  padding: 5px 10px;
+  width: 100%;
+  color: var(--color__primary-white);
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease-out;
+}
+
+.datalist-card__update-btn {
+  color: var(--color__primary-white);
+  background-color: var(--color__primary-softblack);
+  transition: color 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+.datalist-card__delete-btn {
+  color: var(--color__primary-white);
+  background-color: var(--color__primary-softblack);
+  transition: color 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+.datalist-card__update-btn:focus-visible {
+  color: var(--color__primary-softblack);
+  background-color: var(--color__primary-white);
+  transition: color 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+.datalist-card__delete-btn:focus-visible {
+  background-color: var(--color__red-2);
+  transition: background-color 0.3s ease-out;
+}
+
+/* Hover and other Effects */
+
+@media (any-hover: hover) {
+  .datalist-card__update-btn:hover {
+    color: var(--color__primary-softblack);
+    background-color: var(--color__primary-white);
+    transition: color 0.3s ease-out, background-color 0.3s ease-out;
+  }
+
+  .datalist-card__delete-btn:hover {
+    background-color: var(--color__red-2);
+    transition: color 0.3s ease-out, background-color 0.3s ease-out;
+  }
+}
+
+.datalist-card__update-btn:active {
+  color: var(--color__primary-softblack);
+  background-color: var(--color__gray-card);
+  transition: color 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+.datalist-card__delete-btn:active {
+  background-color: var(--color__red-3);
+  transition: color 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+/* --- */
+
+.datalist-cards__item-title {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 5px;
+  width: 100%;
+  font-family: 'VelaSans Light', sans-serif;
+  font-weight: 100;
+  font-size: 18px;
+  color: var(--color__primary-softblack);
+  background-color: var(--color__primary-white);
+  text-align: center;
+}
+
+.datalist-cards__addcard {
+  max-width: 350px;
+  width: 100%;
+  align-self: center;
+}
+
+.datalist-cards__addcard-btn {
+  padding: 10px;
+  width: 100%;
+  color: var(--color__primary-white);
+  background-color: var(--color__green-btn);
+  outline: none;
+  transition: all 0.3s ease-out;
+}
+
+.datalist-cards__addcard-btn:focus-visible {
+  background-color: var(--color__green-btn-2);
+}
+
+@media (any-hover: hover) {
+  .datalist-cards__addcard-btn:hover {
+    background-color: var(--color__green-btn-2);
+  }
+}
+
+.datalist-cards__addcard-btn:active {
+  transform: scale(0.95);
+}
+
+/* WIDTH for «Employees» list */
+.employee-width {
+  max-width: 100px;
+  max-height: 405px;
+  height: clamp(350px, 50vw, 405px);
+}

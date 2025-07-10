@@ -1,0 +1,115 @@
+.newsline__modalwindow {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  background-color: var(--color__primary-softblack);
+  transform: scale(0);
+  transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
+  animation: close-modalwindow-news 0.3s ease-out;
+}
+
+.newsline__modalwindow.is-active {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
+  animation: open-modalwindow-news 0.3s ease-out;
+}
+
+@keyframes open-modalwindow-news {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes close-modalwindow-news {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.newsline-modalwindow__wrapper {
+  width: 100%;
+  overflow-y: auto;
+  background-color: var(--color__primary-softblack);
+  transition: background-color 0.3s ease-out;
+}
+
+.newsline-modalwindow__wrapper.day-theme {
+  background-color: var(--color__primary-white);
+  transition: background-color 0.3s ease-out;
+}
+
+.card-news {
+  position: relative;
+  margin: 0 auto;
+  padding: clamp(29px, 5vw, 50px) 15px;
+  max-width: 1030px;
+  width: 100%;
+}
+
+.card-news__photowrapper {
+  display: flex;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.card-news__photowrapper-photo {
+  width: 100%;
+  max-height: 550px;
+  object-fit: cover;
+}
+
+.text-content {
+  padding: 0 20px;
+}
+
+.text-content__title {
+  font-family: 'VelaSans Light', sans-serif;
+  font-weight: 100;
+  font-size: clamp(22px, 5vw, 32px);
+  margin-bottom: 10px;
+}
+
+.text-content__datepublication {
+  margin-bottom: 5px;
+}
+
+.text-content__description {
+  font-size: clamp(14px, 3vw, 18px);
+  text-align: justify;
+}
+
+.text-content__title,
+.text-content__datepublication,
+.text-content__description {
+  color: var(--color__primary-white);
+  background-color: transparent;
+  transition: color 0.3s ease;
+}
+
+.text-content__title.day-theme,
+.text-content__datepublication.day-theme,
+.text-content__description.day-theme {
+  color: var(--color__primary-softblack);
+  transition: color 0.3s ease;
+}
+
+.newsline-modalwindow__closebtnwrap {
+  top: clamp(1%, 3vw, 3%);
+  right: 1%;
+}

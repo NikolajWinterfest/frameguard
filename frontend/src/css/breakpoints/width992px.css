@@ -1,0 +1,317 @@
+@media (max-width: 992px) {
+  .secondary-title {
+    text-align: center;
+  }
+
+  /* _____ HEADER _____ */
+  .hero__logotype {
+    font-size: clamp(200px, 37vw, 430px);
+    letter-spacing: clamp(-34px, 50vw, -45px);
+  }
+
+  .burger {
+    transform: scale(0.90);
+  }
+
+  /* _____ ABOUTUS _____ */
+  .card__content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .employee-card__information {
+    text-align: center;
+  }
+
+  .companyinfo-content {
+    justify-content: center;
+  }
+
+  .companyideals__paragraphblock {
+    display: flex;
+    flex-direction: column;
+    max-width: 650px;
+    text-align: center;
+  }
+
+  .companyinfo__companyname {
+    display: none;
+  }
+
+  .companyinfo__companyname.ver-mobile {
+    display: block;
+    font-size: 185px;
+    letter-spacing: -21px;
+  }
+
+  .employee-card {
+    padding-bottom: clamp(41px, 5vw, 69px);
+  }
+
+  .employee-card__name {
+    margin-right: 0;
+  }
+
+  .employee-card__name::before {
+    content: '';
+    position: absolute;
+    left: -5px;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid var(--color__primary-white);
+  }
+
+  .employee-card__description {
+    max-height: 160px;
+  }
+
+  .employee-card__information {
+    position: relative;
+  }
+
+  .employee-card__information::before {
+    left: 0;
+    right: 50%;
+  }
+
+  .employee-card__closebtnwrap {
+    position: absolute;
+    top: auto;
+    left: 50%;
+    bottom: -45px;
+    transform: translate(-50%);
+  }
+
+  /* _____ PROJECTS _____ */
+  .card-projects {
+    flex: 1 1 auto;
+    max-width: 650px;
+    height: clamp(300px, 50vw, 350px);
+  }
+
+  .projects__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 0 20px;
+  }
+
+  .card-projects {
+    max-width: 650px;
+    box-shadow: 0px 0px 8px 5px var(--color__primary-softblack-3);
+    transition: box-shadow 0.3s ease-out;
+  }
+
+  .card-projects.day-theme {
+    box-shadow: 0px 0px 5px 1px var(--color__gray-3);
+    transition: box-shadow 0.3s ease-out;
+  }
+
+  .information-project {
+    min-height: 50px;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* _____ CONTACTS _____ */
+  .contacts__descr {
+    text-align: center;
+  }
+
+  .contacts-inputfields {
+    flex-direction: column;
+  }
+
+  .fieldsblock {
+    margin-bottom: 30px;
+  }
+
+  .fieldsblock__fieldwrapper-input,
+  .wrapperarea__area {
+    border: 1px solid var(--color__primary-white);
+  }
+
+  .fieldsblock__fieldwrapper-input.day-theme,
+  .wrapperarea__area.day-theme {
+    border: 1px solid var(--color__primary-softblack);
+  }
+
+  .wrapperfiles {
+    border: 1px solid var(--color__primary-white);
+  }
+
+  .wrapperfiles__filename {
+    width: clamp(20%, 3vw, 100%);
+    font-size: clamp(11px, 3vw, 14px);
+  }
+
+  .wrapperfiles.day-theme {
+    border: 1px solid var(--color__primary-softblack);
+  }
+
+  .wrapperfiles .wrapperfiles__filename::before {
+    border-right: 1px solid var(--color__primary-white);
+  }
+
+  .wrapperfiles.day-theme .wrapperfiles__filename::before {
+    border-right: 1px solid var(--color__primary-softblack);
+  }
+
+  .wrapperarea {
+    margin-bottom: clamp(15px, 4vw, 30px);
+  }
+
+  @media (any-hover: hover) {
+    .wrapperfiles:hover .wrapperfiles__filename::before {
+      border-right: 1px solid var(--color__primary-softblack);
+    }
+
+    .wrapperfiles.day-theme:hover .wrapperfiles__filename::before {
+      border-right: 1px solid var(--color__primary-white);
+    }
+  }
+
+  .contacts-send__btnwrap {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contacts-send__btnwrap-clear {
+    order: 2;
+  }
+
+  .contacts-send__btnwrap-clear,
+  .contacts-send__btnwrap-send {
+    padding: 15px;
+    max-width: 100%;
+    border: 1px solid var(--color__primary-white);
+  }
+
+  .contacts-send__btnwrap-clear.day-theme,
+  .contacts-send__btnwrap-send.day-theme {
+    border: 1px solid var(--color__primary-softblack);
+  }
+
+  .contacts-form__companyname {
+    display: none;
+  }
+
+  .contacts-form__companyname.ver-mobile {
+    display: block;
+    font-size: 185px;
+    letter-spacing: -21px;
+  }
+
+  .company-location__information {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .company-location__information-description {
+    margin-right: 0;
+  }
+
+  .information-description__wrapper {
+    text-align: center;
+  }
+
+  .socialnetworks__list {
+    justify-content: center;
+  }
+
+  .project-card {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 25px;
+    max-width: 600px;
+  }
+
+  .project-card__information {
+    width: 100%;
+  }
+
+  .modalwindowform-infowrap__name,
+  .modalwindowform-infowrap__email,
+  .modalwindowform-infowrap__phone,
+  .modalwindowform-infowrap__description,
+  .modalwindowform-infowrap__files {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* _____ PRIVACY POLICY _____ */
+  .paragraphs-privacypolicy__item {
+    max-width: 800px;
+  }
+
+  /* _____ ADMIN PANEL _____ */
+  .adminpanel__content {
+    flex-direction: column;
+  }
+
+  .adminpanel-title {
+    text-align: center;
+  }
+
+  .adminpanel-datalist {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .menu-list {
+    flex-direction: row;
+    justify-content: center;
+    gap: clamp(10px, 3vw, 25px);
+    max-width: 100%;
+  }
+
+  .menu-list__item-btn {
+    text-align: center;
+  }
+
+  .menu-list::after {
+    top: auto;
+    bottom: 10%;
+    width: 90%;
+    height: 1px;
+    border-right: 0;
+    border-bottom: 1px solid var(--color__primary-white);
+    transform: translateX(-5%);
+  }
+
+  .datalist-projects__list {
+    justify-content: center;
+  }
+
+  .datalist-projects__item {
+    min-width: 265px;
+  }
+
+  /* _____ ADMIN PANEL (Modal Window Card) _____ */
+  .datalist-cards__list {
+    justify-content: center;
+  }
+
+  .inputfields-input,
+  .admin-inputfields__textarea,
+  .choose-gender {
+    border: 1px solid var(--color__primary-white);
+  }
+
+  .admin-inputfields__wrapperinput {
+    border: 1px solid var(--color__primary-white);
+  }
+
+  .adminpanel-cardform__wrapperbuttons-submitbtn,
+  .adminpanel-cardform__wrapperbuttons-clearbtn {
+    border: 1px solid var(--color__primary-white);
+  }
+
+  .datalist-forms__list {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,178 @@
+.modalwindowform {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
+}
+
+.modalwindowform.is-active {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
+}
+
+.modalwindowform__wrapper {
+  position: relative;
+  padding: 0 20px;
+  max-width: 750px;
+  width: 100%;
+}
+
+.modalwindowform__wrapper.shake {
+  animation: shake 0.5s linear;
+}
+
+.modalwindowform__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: clamp(15px, 4vw, 30px);
+  box-shadow: 0px 0px 3px 2px var(--color__black-2);
+  color: var(--color__primary-white);
+  background-color: var(--color__primary-softblack-3);
+  transition: box-shadow 0.3s ease-out, color 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+.modalwindowform__content.day-theme {
+  box-shadow: 0px 0px 3px 2px var(--color__gray-2);
+  color: var(--color__primary-softblack);
+  background-color: var(--color__primary-white);
+  transition: box-shadow 0.3s ease-out, color 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+.modalwindowform-content__title {
+  font-size: clamp(16px, 5vw, 26px);
+  font-weight: 100;
+  text-align: center;
+}
+
+.modalwindowform-infowrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px;
+  padding: clamp(10px, 4vw, 20px);
+  max-width: 570px;
+  width: 100%;
+  border-top: 1px solid var(--color__primary-white);
+  color: var(--color__primary-white);
+  background-color: var(--color__primary-softblack-3);
+  transition: border-color 0.3s ease-out, color 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+.modalwindowform-infowrap.day-theme {
+  border-top: 1px solid var(--color__primary-softblack);
+  color: var(--color__primary-softblack);
+  background-color: var(--color__primary-white);
+  transition: border-color 0.3s ease-out, color 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+.modalwindowform-infowrap__name,
+.modalwindowform-infowrap__email,
+.modalwindowform-infowrap__phone,
+.modalwindowform-infowrap__description,
+.modalwindowform-infowrap__files {
+  display: flex;
+  justify-content: space-between;
+  gap: clamp(0px, 1vw, 20px);
+}
+
+.modalwindowform-infowrap__name-title,
+.modalwindowform-infowrap__email-title,
+.modalwindowform-infowrap__phone-title,
+.modalwindowform-infowrap__description-title,
+.modalwindowform-infowrap__files-title {
+  display: inline-block;
+  font-size: clamp(14px, 2vw, 18px);
+}
+
+.modalwindowform-infowrap__name-descr,
+.modalwindowform-infowrap__email-descr,
+.modalwindowform-infowrap__phone-descr,
+.modalwindowform-infowrap__description-descr,
+.modalwindowform-infowrap__files-descr {
+  display: inline-block;
+  padding-right: 8px;
+  text-align: right;
+}
+
+.modalwindowform-infowrap__name-descr,
+.modalwindowform-infowrap__email-descr {
+  word-break: break-all;
+}
+
+.modalwindowform-infowrap__description-descr {
+  min-height: 22px;
+  max-height: 150px;
+  height: 100%;
+  line-height: 1.4;
+  overflow-y: auto;
+}
+
+.modalwindowform-content__closebtnwrap {
+  right: 20px;
+  width: 30px;
+  height: 30px;
+}
+
+.modalwindowform-content__closebtnwrap-btn::after,
+.modalwindowform-content__closebtnwrap-btn::before {
+  width: 25px;
+}
+
+.modalwindowform-content__okbtnwrap {
+  text-align: center;
+}
+
+.modalwindowform-content__okbtnwrap-btn {
+  padding: 5px 50px;
+  font-family: 'VelaSans Light';
+  font-weight: 600;
+  color: var(--color__primary-softblack);
+  background-color: var(--color__primary-white);
+  transition: color 0.3s ease-out, background-color 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.modalwindowform-content__okbtnwrap-btn.day-theme {
+  color: var(--color__primary-white);
+  background-color: var(--color__primary-softblack);
+  transition: color 0.3s ease-out, background-color 0.3s ease-out, transform 0.3s ease-out;
+}
+
+/* Hover and other Effects */
+
+@media (any-hover: hover) {
+  .modalwindowform-content__okbtnwrap-btn:hover {
+    background-color: var(--color__gray-2);
+    transition: background-color 0.3s ease-out;
+  }
+
+  .modalwindowform-content__okbtnwrap-btn.day-theme:hover {
+    background-color: var(--color__primary-softblack-light);
+    transition: background-color 0.3s ease-out;
+  }
+}
+
+.modalwindowform-content__okbtnwrap-btn:active {
+  background-color: var(--color__gray-2);
+}
+
+.modalwindowform-content__okbtnwrap-btn.day-theme:active {
+  background-color: var(--color__primary-softblack-light);
+}
+
+.modalwindowform-content__okbtnwrap-btn:active,
+.modalwindowform-content__okbtnwrap-btn.day-theme:active {
+  transform: scale(0.95);
+  transition: color 0.3s ease-out, background-color 0.3s ease-out, transform 0.3s ease-out;
+}
+
+/* --- */

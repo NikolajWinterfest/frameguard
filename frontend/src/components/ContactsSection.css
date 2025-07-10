@@ -1,0 +1,621 @@
+.contacts {
+  padding-top: var(--padding__section-top);
+  padding-bottom: var(--padding__section-bottom);
+}
+
+.contacts__wrapper {
+  position: relative;
+}
+
+.contacts__descr {
+  margin-bottom: 30px;
+  font-size: clamp(16px, 2vw, 30px);
+}
+
+.contacts-send {
+  width: 100%;
+}
+
+.contacts-send.day-theme::before {
+  color: var(--color__gray-1);
+  text-shadow: -1px -1px 2px var(--color__gray-2);
+}
+
+.contacts-inputfields {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: clamp(15px, 2vw, 20px);
+}
+
+.fieldsblock {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-right: 35px;
+  width: 100%;
+}
+
+.fieldsblock__fieldwrapper {
+  position: relative;
+}
+
+.fieldsblock__fieldwrapper-input,
+.wrapperarea__area {
+  padding: clamp(15px, 4vw, 20px);
+  width: 100%;
+  border: 2px solid var(--color__primary-white);
+  font-size: clamp(14px, 3vw, 20px);
+  color: var(--color__primary-white);
+  outline: none;
+  transition: border-color 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+.fieldsblock__fieldwrapper-input.day-theme,
+.wrapperarea__area.day-theme {
+  color: var(--color__primary-softblack);
+  border: 2px solid var(--color__primary-softblack);
+}
+
+.fieldblock-file {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.wrapperarea {
+  position: relative;
+  height: 175px;
+  margin-bottom: clamp(15px, 4vw, 30px);
+}
+
+.wrapperarea__area {
+  max-width: 100%;
+  height: 100%;
+}
+
+.wrapperfiles {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+  border: 2px solid var(--color__primary-white);
+  font-size: clamp(14px, 4vw, 20px);
+  color: var(--color__primary-white);
+  background-color: var(--color__primary-softblack);
+  transition: border-color 0.3s ease-out, color 0.3s ease-out, background-color 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.wrapperfiles.day-theme {
+  border: 2px solid var(--color__primary-softblack);
+  color: var(--color__primary-softblack);
+  background-color: var(--color__primary-white);
+}
+
+.wrapperfiles__text,
+.wrapperfiles__filename {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.wrapperfiles__filename {
+  display: flex;
+  justify-content: center;
+  right: 0;
+  padding: 0 15px;
+  max-width: clamp(100px, 13vw, 150px);
+  width: 100%;
+  font-size: 14px;
+  text-align: center;
+}
+
+.wrapperfiles__filename::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  border-right: 2px solid var(--color__primary-white);
+  transition: border-right 0.3s ease-out;
+}
+
+.wrapperfiles.day-theme .wrapperfiles__filename::before {
+  border-right: 2px solid var(--color__primary-softblack);
+  transition: border-right 0.3s ease-out;
+}
+
+.wrapperfiles__file {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Privacy Policy Agreement */
+
+.privacypolicywrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-bottom: 15px;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.privacypolicywrap__label-checkbox {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 5px;
+  text-align: right;
+  cursor: pointer;
+}
+
+.privacypolicywrap__input-checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+  opacity: 0;
+}
+
+.privacypolicywrap__icon-checkbox {
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 15px;
+  height: 15px;
+  border: 1px solid var(--color__primary-white);
+  transition: border-color 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+.privacypolicywrap__agreement {
+  padding-left: clamp(20px, 3vw, 25px);
+}
+
+.privacypolicywrap__link,
+.privacypolicywrap__agreement {
+  display: inline-block;
+  font-size: 14px;
+  color: var(--color__gray-3);
+  outline: none;
+  transition: color 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+.privacypolicywrap__link.day-theme,
+.privacypolicywrap__agreement.day-theme {
+  transition: color 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+.privacypolicywrap__icon-checkbox::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 9px;
+  height: 9px;
+  background-color: var(--color__primary-white);
+  opacity: 0;
+  visibility: hidden;
+  transition: background-color 0.3s ease-out;
+}
+
+.privacypolicywrap__icon-checkbox.day-theme {
+  border-color: var(--color__primary-softblack);
+  transition: border-color 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+.privacypolicywrap__icon-checkbox.day-theme::before {
+  background-color: var(--color__primary-softblack);
+  transition: background-color 0.3s ease-out;
+}
+
+.privacypolicywrap__input-checkbox:checked~.privacypolicywrap__icon-checkbox::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.privacypolicywrap__link:focus-visible,
+.privacypolicywrap__input-checkbox:focus-visible~.privacypolicywrap__agreement {
+  color: var(--color__primary-white);
+  transition: color 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+.privacypolicywrap__link.day-theme:focus-visible,
+.privacypolicywrap__input-checkbox:focus-visible~.privacypolicywrap__agreement.day-theme {
+  color: var(--color__primary-softblack);
+  transition: color 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+.privacypolicywrap__input-checkbox:checked~.privacypolicywrap__agreement {
+  color: var(--color__primary-white);
+  transition: color 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+.privacypolicywrap__input-checkbox:checked~.privacypolicywrap__agreement.day-theme {
+  color: var(--color__primary-softblack);
+  transition: color 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+@media (any-hover: hover) {
+
+  .privacypolicywrap__agreement:hover,
+  .privacypolicywrap__link:hover {
+    color: var(--color__primary-white);
+    transition: color 0.3s ease-out, background-color 0.3s ease-out;
+  }
+
+  .privacypolicywrap__agreement.day-theme:hover,
+  .privacypolicywrap__link.day-theme:hover {
+    color: var(--color__primary-softblack);
+    transition: color 0.3s ease-out, background-color 0.3s ease-out;
+  }
+}
+
+/* --- */
+
+.contacts-send__btnwrap {
+  display: flex;
+  justify-content: flex-end;
+  gap: clamp(15px, 3vw, 30px);
+}
+
+.contacts-send__btnwrap-clear,
+.contacts-send__btnwrap-send {
+  padding: 20px;
+  max-width: 350px;
+  width: 100%;
+  border: 2px solid var(--color__primary-white);
+  font-size: 20px;
+  color: var(--color__primary-white);
+  background-color: var(--color__primary-softblack);
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.3s ease-out, color 0.3s ease-out, background-color 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.contacts-send__btnwrap-clear.day-theme,
+.contacts-send__btnwrap-send.day-theme {
+  border: 2px solid var(--color__primary-softblack);
+  color: var(--color__primary-softblack);
+  background-color: var(--color__primary-white);
+  transition: border-color 0.3s ease-out, background-color 0.3s ease-out, color 0.3s ease-out, transform 0.3s ease-out;
+}
+
+/* Hover and other Effects */
+
+.fieldsblock__fieldwrapper-input:focus-visible,
+.wrapperarea__area:focus-visible {
+  background-color: var(--color__primary-softblack-light-3);
+  transition: background-color 0.3s ease-out;
+}
+
+.fieldsblock__fieldwrapper-input.day-theme:focus-visible,
+.wrapperarea__area.day-theme:focus-visible {
+  background-color: var(--color__gray-light);
+  transition: background-color 0.3s ease-out;
+}
+
+.wrapperfiles:focus-within .wrapperfiles__filename::before {
+  border-right: 2px solid var(--color__primary-softblack);
+  transition: border-right 0.3s ease-out;
+}
+
+.wrapperfiles.day-theme:focus-within .wrapperfiles__filename::before {
+  border-right: 2px solid var(--color__primary-white);
+  transition: border-right 0.3s ease-out;
+}
+
+.wrapperfiles:focus-within {
+  color: var(--color__primary-softblack);
+  background-color: var(--color__primary-white);
+  transition: color 0.3s ease-out, background-color 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.wrapperfiles.day-theme:focus-within {
+  color: var(--color__primary-white);
+  background-color: var(--color__primary-softblack);
+  transition: color 0.3s ease-out, background-color 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.contacts-send__btnwrap-clear:focus-visible,
+.contacts-send__btnwrap-send:focus-visible {
+  color: var(--color__primary-softblack);
+  background-color: var(--color__primary-white);
+  transition: border-color 0.3s ease-out, color 0.3s ease-out, background-color 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.contacts-send__btnwrap-clear.day-theme:focus-visible,
+.contacts-send__btnwrap-send.day-theme:focus-visible {
+  color: var(--color__primary-white);
+  background-color: var(--color__primary-softblack);
+  transition: border-color 0.3s ease-out, color 0.3s ease-out, background-color 0.3s ease-out, transform 0.3s ease-out;
+}
+
+@media (any-hover: hover) {
+
+  .contacts-send__btnwrap-clear:hover,
+  .contacts-send__btnwrap-send:hover {
+    color: var(--color__primary-softblack);
+    background-color: var(--color__primary-white);
+    transition: border-color 0.3s ease-out, color 0.3s ease-out, background-color 0.3s ease-out, transform 0.3s ease-out;
+  }
+
+  .contacts-send__btnwrap-clear.day-theme:hover,
+  .contacts-send__btnwrap-send.day-theme:hover {
+    color: var(--color__primary-white);
+    background-color: var(--color__primary-softblack);
+    transition: border-color 0.3s ease-out, color 0.3s ease-out, background-color 0.3s ease-out, transform 0.3s ease-out;
+  }
+
+  .fieldsblock__fieldwrapper-input:hover,
+  .wrapperarea__area:hover {
+    background-color: var(--color__primary-softblack-light-3);
+    transition: background-color 0.3s ease-out;
+  }
+
+  .fieldsblock__fieldwrapper-input.day-theme:hover,
+  .wrapperarea__area.day-theme:hover {
+    background-color: var(--color__gray-light);
+    transition: background-color 0.3s ease-out;
+  }
+
+  .wrapperfiles:hover .wrapperfiles__filename::before {
+    border-right: 2px solid var(--color__primary-softblack);
+    transition: border-right 0.3s ease-out;
+  }
+
+  .wrapperfiles.day-theme:hover .wrapperfiles__filename::before {
+    border-right: 2px solid var(--color__primary-white);
+    transition: border-right 0.3s ease-out;
+  }
+
+  .wrapperfiles:hover {
+    color: var(--color__primary-softblack);
+    background-color: var(--color__primary-white);
+    transition: color 0.3s ease-out, background-color 0.3s ease-out, transform 0.3s ease-out;
+  }
+
+  .wrapperfiles.day-theme:hover {
+    color: var(--color__primary-white);
+    background-color: var(--color__primary-softblack);
+    transition: color 0.3s ease-out, background-color 0.3s ease-out, transform 0.3s ease-out;
+  }
+
+  .contacts-send__btnwrap-clear:hover,
+  .contacts-send__btnwrap-send:hover {
+    color: var(--color__primary-softblack);
+    background-color: var(--color__primary-white);
+    transition: border-color 0.3s ease-out, color 0.3s ease-out, background-color 0.3s ease-out, transform 0.3s ease-out;
+  }
+
+  .contacts-send__btnwrap-clear.day-theme:hover,
+  .contacts-send__btnwrap-send.day-theme:hover {
+    color: var(--color__primary-white);
+    background-color: var(--color__primary-softblack);
+    transition: border-color 0.3s ease-out, color 0.3s ease-out, background-color 0.3s ease-out, transform 0.3s ease-out;
+  }
+}
+
+.wrapperfiles:active {
+  color: var(--color__primary-softblack);
+  background-color: var(--color__primary-white);
+  transform: scale(0.95);
+  transition: color 0.3s ease-out, background-color 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.wrapperfiles.day-theme:active {
+  color: var(--color__primary-white);
+  background-color: var(--color__primary-softblack);
+  transform: scale(0.95);
+  transition: color 0.3s ease-out, background-color 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.wrapperfiles:active .wrapperfiles__filename::before {
+  border-color: var(--color__primary-softblack);
+  transition: border-right 0.3s ease-out;
+}
+
+.wrapperfiles.day-theme:active .wrapperfiles__filename::before {
+  border-color: var(--color__primary-white);
+  transition: border-right 0.3s ease-out;
+}
+
+.contacts-send__btnwrap-clear:active,
+.contacts-send__btnwrap-send:active {
+  color: var(--color__primary-softblack);
+  background-color: var(--color__primary-white);
+  transform: scale(0.95);
+  transition: border-color 0.3s ease-out, color 0.3s ease-out, background-color 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.contacts-send__btnwrap-clear.day-theme:active,
+.contacts-send__btnwrap-send.day-theme:active {
+  color: var(--color__primary-white);
+  background-color: var(--color__primary-softblack);
+  transform: scale(0.95);
+  transition: border-color 0.3s ease-out, color 0.3s ease-out, background-color 0.3s ease-out, transform 0.3s ease-out;
+}
+
+/* --- */
+
+.contacts-form__companyname.ver-mobile {
+  display: none;
+  font-size: 46px;
+}
+
+.company-location__information {
+  display: flex;
+  justify-content: space-between;
+  gap: clamp(20px, 5vw, 30px);
+}
+
+.company-location__information-description {
+  margin-right: 30px;
+}
+
+.information-description__wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.information-description__wrapper-feedback {
+  margin-bottom: clamp(50px, 4vw, 80px);
+}
+
+.feedback__email,
+.feedback__phone {
+  display: block;
+  font-size: clamp(24px, 7vw, 45px);
+  word-wrap: break-word;
+  color: var(--color__primary-white);
+  outline: none;
+  transition: color 0.3s ease-out, background-color 0.3s ease-out, text-shadow 0.3s ease;
+}
+
+.feedback__email.day-theme,
+.feedback__phone.day-theme {
+  color: var(--color__primary-softblack);
+}
+
+/* Hover and other Effect for Link's */
+
+.feedback__email:focus-visible,
+.feedback__phone:focus-visible {
+  text-shadow: 0px 0px 5px var(--color__gray-light);
+  transition: text-shadow 0.3s ease;
+}
+
+.feedback__email.day-theme:focus-visible,
+.feedback__phone.day-theme:focus-visible {
+  text-shadow: 0px 0px 5px var(--color__primary-softblack-5);
+  transition: text-shadow 0.3s ease;
+}
+
+@media (any-hover: hover) {
+
+  .feedback__email:hover,
+  .feedback__phone:hover {
+    text-shadow: 0px 0px 5px var(--color__gray-light);
+    transition: text-shadow 0.3s ease;
+  }
+
+  .feedback__email.day-theme:hover,
+  .feedback__phone.day-theme:hover {
+    text-shadow: 0px 0px 5px var(--color__primary-softblack-5);
+    transition: text-shadow 0.3s ease;
+  }
+}
+
+/* --- */
+
+.socialnetworks__list {
+  display: flex;
+  gap: 30px;
+}
+
+.socialnetworks__item {
+  width: 50px;
+  height: 50px;
+}
+
+.socialnetworks__item-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  outline: none;
+}
+
+.socialnetworks__item-link svg {
+  width: 100%;
+  height: 100%;
+  fill: var(--color__primary-white);
+  transition: fill 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.socialnetworks__item-link.day-theme svg {
+  fill: var(--color__primary-softblack);
+  transition: fill 0.3s ease-out, transform 0.3s ease-out;
+}
+
+/* Hover and other Effects for «Social Networks Link's» */
+
+.socialnetworks__item-link:focus-visible svg {
+  fill: var(--color__gray-3);
+  transition: fill 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.socialnetworks__item-link.day-theme:focus-visible svg {
+  fill: var(--color__primary-softblack-light-2);
+  transition: fill 0.3s ease-out, transform 0.3s ease-out;
+}
+
+@media (any-hover: hover) {
+  .socialnetworks__item-link:hover svg {
+    fill: var(--color__gray-3);
+    transition: fill 0.3s ease-out, transform 0.3s ease-out;
+  }
+
+  .socialnetworks__item-link.day-theme:hover svg {
+    fill: var(--color__primary-softblack-light-2);
+    transition: fill 0.3s ease-out, transform 0.3s ease-out;
+  }
+}
+
+.socialnetworks__item-link:active svg {
+  fill: var(--color__gray-3);
+  transform: scale(0.95);
+  transition: fill 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.socialnetworks__item-link.day-theme:active svg {
+  fill: var(--color__primary-softblack-light-2);
+  transform: scale(0.95);
+  transition: fill 0.3s ease-out, transform 0.3s ease-out;
+}
+
+/* --- */
+.photowrapper {
+  max-width: 850px;
+  width: 100%;
+}
+
+.photowrapper__image {
+  display: flex;
+  box-shadow: 0px 0px 10px 1px var(--color__black-2);
+}
+
+/* Error text */
+
+.fieldsblock__fieldwrapper-errortext {
+  position: absolute;
+  top: -23px;
+  margin-bottom: 5px;
+  padding-left: 10px;
+  color: var(--color__red);
+  opacity: 0;
+}
+
+.fieldsblock__fieldwrapper-errortext.error-message {
+  opacity: 1;
+  transition: opacity 0.3s ease-out;
+}
+
+.privacypolicywrap__errortext {
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: var(--color__red);
+  text-align: right;
+  opacity: 0;
+}
+
+.privacypolicywrap__errortext.error-message {
+  opacity: 1;
+  transition: opacity 0.3s ease-out;
+}

@@ -1,0 +1,138 @@
+.datalist-forms__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.item-forms {
+  max-width: 350px;
+  width: 100%;
+  box-shadow: 0px 0px 3px 2px var(--color__primary-softblack-5);
+  background-color: var(--color__primary-softblack);
+  transition: box-shadow 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+.item-forms.day-theme {
+  max-width: 350px;
+  width: 100%;
+  box-shadow: 0px 0px 3px 2px var(--color__gray-2);
+  background-color: var(--color__primary-white);
+  transition: box-shadow 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+.item-forms__headgroup,
+.item-forms__secondgroup,
+.item-forms__thirdgroup {
+  display: flex;
+}
+
+.form-name,
+.form-email,
+.form-phone {
+  padding: 5px;
+  width: 100%;
+  text-align: center;
+}
+
+.item-forms__secondgroup {
+  display: flex;
+}
+
+.form-id {
+  color: var(--color__primary-softblack);
+  background-color: var(--color__primary-white);
+  transition: color 0.3s ease-out, background-color 0.3s ease-out
+}
+
+.form-id.day-theme {
+  color: var(--color__primary-white);
+  background-color: var(--color__primary-softblack);
+  transition: color 0.3s ease-out, background-color 0.3s ease-out
+}
+
+.form-id,
+.item-forms__secondgroup-text,
+.item-forms__thirdgroup-text {
+  padding: 5px;
+  max-width: 60px;
+  width: 100%;
+  text-align: center;
+}
+
+.item-forms__secondgroup,
+.item-forms__thirdgroup,
+.form-name {
+  background-color: transparent;
+  transition: color 0.3s ease-out;
+}
+
+.wrapperbuttons-forms {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapperbuttons-forms__btn-show,
+.wrapperbuttons-forms__btn-delete {
+  padding: 5px;
+  width: 100%;
+  border-top: 1px solid var(--color__primary-white);
+  color: var(--color__primary-white);
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  background-color: transparent;
+  transition: border-color 0.3s ease-out, color 0.3s ease-out, color 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+.wrapperbuttons-forms__btn-show.day-theme,
+.wrapperbuttons-forms__btn-delete.day-theme {
+  border-top: 1px solid var(--color__primary-softblack);
+  color: var(--color__primary-softblack);
+  transition: border-color 0.3s ease-out, color 0.3s ease-out, color 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+/* Hover and other Effects */
+
+@media (any-hover: hover) {
+  .wrapperbuttons-forms__btn-show:hover {
+    color: var(--color__primary-softblack);
+    background-color: var(--color__primary-white);
+    transition: color 0.3s ease-out, background-color 0.3s ease-out;
+  }
+
+  .wrapperbuttons-forms__btn-delete:hover {
+    background-color: var(--color__red-2);
+    transition: color 0.3s ease-out, background-color 0.3s ease-out;
+  }
+
+  .wrapperbuttons-forms__btn-show.day-theme:hover {
+    color: var(--color__primary-white);
+    background-color: var(--color__primary-softblack);
+    transition: color 0.3s ease-out, background-color 0.3s ease-out;
+  }
+
+  .wrapperbuttons-forms__btn-delete.day-theme:hover {
+    color: var(--color__primary-white);
+    background-color: var(--color__red-2);
+    transition: color 0.3s ease-out, background-color 0.3s ease-out;
+  }
+}
+
+.wrapperbuttons-forms__btn-show:active {
+  color: var(--color__primary-softblack);
+  background-color: var(--color__gray-2);
+  transition: color 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+.wrapperbuttons-forms__btn-show.day-theme:active {
+  color: var(--color__primary-white);
+  background-color: var(--color__black-2);
+  transition: color 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+.wrapperbuttons-forms__btn-delete:active,
+.wrapperbuttons-forms__btn-delete.day-theme:active {
+  color: var(--color__primary-white);
+  background-color: var(--color__red-3);
+  transition: color 0.3s ease-out, background-color 0.3s ease-out;
+}

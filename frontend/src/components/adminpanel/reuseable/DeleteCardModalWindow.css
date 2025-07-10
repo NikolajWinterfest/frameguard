@@ -1,0 +1,146 @@
+.smallmodalwindow {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.smallmodalwindow.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.smallmodalwindow__wrapper {
+  width: clamp(270px, 67vw, 550px);
+  height: 100px;
+  box-shadow: 0px 0px 3px 1px var(--color__black-3);
+  background-color: var(--color__primary-softblack-5);
+}
+
+.smallmodalwindow__wrapper.shake {
+  animation: shake 0.5s linear;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  10% {
+    transform: translate(5px);
+  }
+
+  20% {
+    transform: translate(-5px);
+  }
+
+  30% {
+    transform: translate(5px);
+  }
+
+  40% {
+    transform: translate(-5px);
+  }
+
+  50% {
+    transform: translate(5px);
+  }
+
+  60% {
+    transform: translate(-5px);
+  }
+
+  70% {
+    transform: translate(5px);
+  }
+
+  80% {
+    transform: translate(-5px);
+  }
+
+  100% {
+    transform: translate(0px);
+  }
+}
+
+.smallmodalwindow-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.smallmodalwindow-card__title,
+.smallmodalwindow-card__title.day-theme {
+  padding: 0 15px;
+  padding-top: clamp(20px, 4.5vw, 30px);
+  font-weight: 100;
+  color: var(--color__primary-white);
+  background-color: var(--color__primary-softblack-5);
+}
+
+.smallmodalwindow-card__wrapperbuttons {
+  display: flex;
+  margin-top: auto;
+  width: 100%;
+}
+
+.smallmodalwindow-card__wrapperbuttons-confirm,
+.smallmodalwindow-card__wrapperbuttons-reject {
+  padding: 5px 10px;
+  width: 100%;
+  font-size: 16px;
+  box-shadow: 0px -5px 5px -3px var(--color__black-2);
+  color: var(--color__primary-white);
+  background-color: var(--color__primary-softblack);
+  transition: color 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+/* Hover and other Effects for Buttons */
+
+.smallmodalwindow-card__wrapperbuttons-confirm:focus-visible {
+  color: var(--color__primary-white);
+  background-color: var(--color__red-2);
+  transition: color 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+.smallmodalwindow-card__wrapperbuttons-reject:focus-visible {
+  color: var(--color__primary-softblack);
+  background-color: var(--color__primary-white);
+  transition: color 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+@media (any-hover: hover) {
+  .smallmodalwindow-card__wrapperbuttons-confirm:hover {
+    color: var(--color__primary-white);
+    background-color: var(--color__red-2);
+    transition: color 0.3s ease-out, background-color 0.3s ease-out;
+  }
+
+  .smallmodalwindow-card__wrapperbuttons-reject:hover {
+    color: var(--color__primary-softblack);
+    background-color: var(--color__primary-white);
+    transition: color 0.3s ease-out, background-color 0.3s ease-out;
+  }
+}
+
+.smallmodalwindow-card__wrapperbuttons-confirm:active {
+  color: var(--color__primary-white);
+  background-color: var(--color__red-3);
+  transition: color 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+.smallmodalwindow-card__wrapperbuttons-reject:active {
+  color: var(--color__primary-softblack);
+  background-color: var(--color__gray-card);
+  transition: color 0.3s ease-out, background-color 0.3s ease-out;
+}
